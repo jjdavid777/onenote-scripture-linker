@@ -2,7 +2,7 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:type="TaskPaneApp">
-  <Id>12345678-90ab-cdef-1234-567890abcdef</Id>
+  <Id>f1a2b3c4-d5e6-7890-abcd-ef1234567890</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Scripture Linker</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
@@ -10,11 +10,8 @@
   <Description DefaultValue="Automatically hyperlink scripture references in OneNote."/>
   <IconUrl DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/icon-32.png"/>
   <SupportUrl DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/support"/>
-  <AppDomains>
-    <AppDomain>https://jjdavid777.github.io</AppDomain>
-  </AppDomains>
   <Hosts>
-    <Host Name="Document"/>
+    <Host Name="OneNote" />
   </Hosts>
   <DefaultSettings>
     <SourceLocation DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/taskpane.html"/>
