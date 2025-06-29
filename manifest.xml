@@ -2,19 +2,19 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:type="TaskPaneApp">
-  <Id>f1a2b3c4-d5e6-7890-abcd-ef1234567890</Id>
+  <Id>12345678-90ab-cdef-1234-567890abcdef</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Scripture Linker</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Scripture Linker Add-in"/>
-  <Description DefaultValue="Automatically hyperlink scripture references in OneNote."/>
-  <IconUrl DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/icon-32.png"/>
-  <SupportUrl DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/support"/>
+  <DisplayName DefaultValue="Scripture Linker"/>
+  <Description DefaultValue="Link selected scripture references to Bible.com (NLT)"/>
+  <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
+  <SupportUrl DefaultValue="https://localhost:3000"/>
   <Hosts>
-    <Host Name="OneNote" />
+    <Host Name="OneNote"/>
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/taskpane.html"/>
+    <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
 </OfficeApp>
