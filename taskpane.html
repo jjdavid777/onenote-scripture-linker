@@ -1,14 +1,24 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
   <title>Scripture Linker</title>
+  <!-- Load the Office.js library -->
   https://appsforoffice.microsoft.com/lib/1/hosted/office.js
-  <script src="taskpane.js"></script>
 </head>
 <body>
   <h1>Scripture Linker Add-in</h1>
   <p>Type scripture references and press space to hyperlink them.</p>
+
+  <!-- Wait until Office.js is ready, then load your script -->
+  <script>
+    Office.onReady(() => {
+      const script = document.createElement("script");
+      script.src = "taskpane.js";
+      document.body.appendChild(script);
+    });
+  </script>
 </body>
 </html>
 
