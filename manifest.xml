@@ -4,34 +4,76 @@
            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
            xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
            xsi:type="TaskPaneApp">
-  <Id>12345678-9abc-def0-1234-56789abcdef0</Id>
+
+  <Id>f3b2c9e4-1b4e-4f3e-9f6e-1a2b3c4d5e6f</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Scripture Linker</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Scripture Linker"/>
-  <Description DefaultValue="Link selected scripture references to Bible.com (NLT)"/>
+  <Description DefaultValue="Automatically link scripture references to Bible.com"/>
+
   <IconUrl DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/assets/icon-32.png"/>
-  <SupportUrl DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/"/>
-  <AppDomains>
-    <AppDomain>https://jjdavid777.github.io</AppDomain>
-  </AppDomains>
+  <SupportUrl DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker"/>
+
   <Hosts>
     <Host Name="OneNote"/>
   </Hosts>
+
   <DefaultSettings>
     <SourceLocation DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/taskpane.html"/>
   </DefaultSettings>
+
   <Permissions>ReadWriteDocument</Permissions>
+
   <VersionOverrides Version="1.0">
     <Hosts>
-      <Host xsi:type="TaskPaneApp">
+      <Host Name="OneNote">
         <DesktopFormFactor>
-          <SourceLocation DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/taskpane.html"/>
-          <RequestedHeight>250</RequestedHeight>
-          <RequestedWidth>300</RequestedWidth>
-          <SupportsPinning>true</SupportsPinning>
+          <FunctionFile resid="functionFile"/>
+          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="msgReadGroup">
+                <Label resid="groupLabel"/>
+                <Control xsi:type="Button" id="msgReadOpenPaneButton">
+                  <Label resid="paneButtonLabel"/>
+                  <Supertip>
+                    <Title resid="paneButtonTitle"/>
+                    <Description resid="paneButtonDesc"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon16"/>
+                    <bt:Image size="32" resid="icon32"/>
+                    <bt:Image size="80" resid="icon80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="taskpaneUrl"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
     </Hosts>
+
+    <Resources>
+      <bt:Images>
+        <bt:Image id="icon16" DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/assets/icon-16.png"/>
+        <bt:Image id="icon32" DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/assets/icon-32.png"/>
+        <bt:Image id="icon80" DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/assets/icon-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="taskpaneUrl" DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/taskpane.html"/>
+        <bt:Url id="functionFile" DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/taskpane.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="groupLabel" DefaultValue="Scripture Tools"/>
+        <bt:String id="paneButtonLabel" DefaultValue="Link Scriptures"/>
+        <bt:String id="paneButtonTitle" DefaultValue="Link Scriptures"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="paneButtonDesc" DefaultValue="Automatically link scripture references to Bible.com"/>
+      </bt:LongStrings>
+    </Resources>
   </VersionOverrides>
 </OfficeApp>
