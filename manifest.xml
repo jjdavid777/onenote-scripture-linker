@@ -1,20 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
            xsi:type="TaskPaneApp">
-  <Id>12345678-90ab-cdef-1234-567890abcdef</Id>
+  <Id>12345678-9abc-def0-1234-56789abcdef0</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Scripture Linker</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Scripture Linker"/>
   <Description DefaultValue="Link selected scripture references to Bible.com (NLT)"/>
-  <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
-  <SupportUrl DefaultValue="https://localhost:3000"/>
+  <IconUrl DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/assets/icon-32.png"/>
+  <SupportUrl DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/"/>
+  <AppDomains>
+    <AppDomain>https://jjdavid777.github.io</AppDomain>
+  </AppDomains>
   <Hosts>
     <Host Name="OneNote"/>
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+    <SourceLocation DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/taskpane.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides Version="1.0">
+    <Hosts>
+      <Host xsi:type="TaskPaneApp">
+        <DesktopFormFactor>
+          <SourceLocation DefaultValue="https://jjdavid777.github.io/onenote-scripture-linker/taskpane.html"/>
+          <RequestedHeight>250</RequestedHeight>
+          <RequestedWidth>300</RequestedWidth>
+          <SupportsPinning>true</SupportsPinning>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+  </VersionOverrides>
 </OfficeApp>
